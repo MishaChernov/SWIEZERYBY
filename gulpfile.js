@@ -22,6 +22,8 @@ const ghPages = require('gulp-gh-pages');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 
+const pug = require('gulp-pug');
+
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";  //NODE_ENV=production gulp build
 
 gulp.task('styles', function() {
@@ -88,16 +90,36 @@ gulp.task('assets', function() {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('pug-build', function() {
+  return multipipe(
+    gulp.src('src/assets/**.pug'),
+      pug({
+        pretty: true
+      }),
+      debug({title: 'pug-render'}),
+      gulp.dest('build/')
+  ).on('error', notify.onError(function(err) {
+    return {
+      title: 'Pug-build',
+      message: err.message
+    };
+  }));
+});
+
 gulp.task('build', gulp.series(
   'clean',
   gulp.parallel('styles', 'assets'),
-  'min-js', 'images')
+  'pug-build',
+  'min-js',
+  'images')
 );
 
 gulp.task('watch', function() {
   gulp.watch('src/sass/**/*.*', gulp.series('styles'));
 
   gulp.watch('src/assets/**/*.*', gulp.series('assets'));
+
+  gulp.watch('src/assets/**.pug', gulp.series('pug-build'));
 });
 
 gulp.task('deploy', function() {
