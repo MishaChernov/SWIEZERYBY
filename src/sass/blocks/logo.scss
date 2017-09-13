@@ -1,0 +1,33 @@
+.logo {
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $secondary-font-color;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 1px;
+
+  &--weight-bold {
+    font-weight: 700;
+  }
+  &--weight-regular {
+    font-weight: 400;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $secondary-font-color;
+    text-decoration: underline;
+  }
+  &--active {
+    &:hover {
+      cursor: default;
+      color: $secondary-font-color;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-widht: $width-md-device) {
+
+}

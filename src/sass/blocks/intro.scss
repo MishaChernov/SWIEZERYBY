@@ -1,0 +1,27 @@
+.intro {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.intro__title,
+.intro__text {
+  color: #ffffff;
+}
+.intro__title {
+  margin-bottom: 0;
+  font-size: 78px;
+  font-weight: 400;
+  line-height: 75px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.intro__text {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: $width-md-device) {
+  .intro {
+    margin-top: 230px;
+    margin-bottom: 210px;
+  }
+}

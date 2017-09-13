@@ -21,7 +21,7 @@ const imagemin = require('gulp-imagemin');
 const ghPages = require('gulp-gh-pages');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
-const pug = require('gulp-pug');
+const jade = require('gulp-jade');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == "development";  // set NODE_ENV=production&&gulp build   (В консоль на продакшн(Сборка без sourcemaps))
 
@@ -96,17 +96,17 @@ gulp.task('assets', function() {
   }));
 });
 
-gulp.task('pug-build', function() {
+gulp.task('jade-build', function() {
   return multipipe(
-    gulp.src('src/pug/global/*.pug'),
-    pug({
+    gulp.src('src/jade/global/*.jade'),
+    jade({
       pretty: true
     }),
     gulp.dest('build')
 
   ).on('error', notify.onError(function(err) {
     return {
-      title: 'Pug-build',
+      title: 'Jade-build',
       message: err.message
     };
   }));
@@ -114,13 +114,13 @@ gulp.task('pug-build', function() {
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('pug-build', 'styles', 'assets'),
+  gulp.parallel('jade-build', 'styles', 'assets'),
   'min-js',
   'images')
 );
 
 gulp.task('watch', function() {
-  gulp.watch('src/pug/**/*.pug', gulp.series('pug-build'));
+  gulp.watch('src/jade/**/*.jade', gulp.series('jade-build'));
 
   gulp.watch('src/sass/**/*.*', gulp.series('styles'));
 
