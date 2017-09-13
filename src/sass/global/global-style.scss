@@ -1,0 +1,14 @@
+ul {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+body {
+  @include mobile-primary-text-style;
+}
+
+.no-js .main-menu__list {
+  display: block;
+}
