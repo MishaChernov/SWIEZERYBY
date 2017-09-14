@@ -1,0 +1,28 @@
+.btn {
+  display: block;
+  width: 145px;
+  padding: 10px;
+
+  font-family: $secondary-font-family;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $secondary-bg-color;
+  border-radius: 5px;
+  color: #ffffff;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #a0a0a0;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+  &:visited,
+  &:focus {
+    text-decoration: none;
+  }
+}

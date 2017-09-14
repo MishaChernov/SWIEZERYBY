@@ -24,28 +24,31 @@
 
             /*device style title*/
 @mixin mobile-primary-title-style {
-  font-family: $primary-font-family;
+  font-family: $secondary-font-family;
   font-style: normal;
   font-weight: 700;
   font-size: $mobile-primary-size-title;
   line-height: $mobile-primary-line-height-title;
   color: $primary-title-color;
+  text-transform: uppercase;
 }
 
 @mixin tablet-primary-title-style {
-  font-family: $primary-font-family;
+  font-family: $secondary-font-family;
   font-style: normal;
   font-weight: 700;
   font-size: $tablet-primary-size-title;
   line-height: $tablet-primary-line-height-title;
   color: $primary-title-color;
+  text-transform: uppercase;
 }
 
 @mixin desktop-primary-title-style {
-  font-family: $primary-font-family;
+  font-family: $secondary-font-family;
   font-style: normal;
   font-weight: 700;
   font-size: $desktop-primary-size-title;
   line-height: $desktop-primary-line-height-title;
   color: $primary-title-color;
+  text-transform: uppercase;
 }

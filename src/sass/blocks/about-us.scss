@@ -1,0 +1,62 @@
+.about-us {
+  padding-top: 70px;
+  margin-bottom: 70px;
+  box-sizing: border-box;
+}
+.about-us__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+.about-us__btn {
+  margin: 0 auto;
+}
+.about-us__phone {
+  display: block;
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-family: $secondary-font-family;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $secondary-bg-color;
+}
+.about-us__figure {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+}
+.about-us__caption {
+  margin-top: -50px;
+  margin-right: 35px;
+
+  font-family: $secondary-font-family;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: right;
+}
+.about-us__img {
+  max-width: 100%;
+}
+
+@media (min-width: $width-sm-device) {
+  .about-us__phone {
+    text-align: left
+  }
+  .about-us__btn {
+    margin: 0;
+  }
+}
+@media (min-width: $width-lg-device) {
+  .about-us {
+    padding-top: 130px;
+    margin-bottom: 150px;
+  }
+  .about-us__img {
+    margin-left: -30px;
+  }
+}
