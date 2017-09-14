@@ -24,31 +24,52 @@
 
             /*device style title*/
 @mixin mobile-primary-title-style {
+<<<<<<< HEAD
   font-family: $secondary-font-family;
+=======
+  font-family: $primary-font-family;
+>>>>>>> ee44f059457ec8e9451bb39934645a6d16e6ec2b
   font-style: normal;
   font-weight: 700;
   font-size: $mobile-primary-size-title;
   line-height: $mobile-primary-line-height-title;
   color: $primary-title-color;
+<<<<<<< HEAD
   text-transform: uppercase;
 }
 
 @mixin tablet-primary-title-style {
   font-family: $secondary-font-family;
+=======
+}
+
+@mixin tablet-primary-title-style {
+  font-family: $primary-font-family;
+>>>>>>> ee44f059457ec8e9451bb39934645a6d16e6ec2b
   font-style: normal;
   font-weight: 700;
   font-size: $tablet-primary-size-title;
   line-height: $tablet-primary-line-height-title;
   color: $primary-title-color;
+<<<<<<< HEAD
   text-transform: uppercase;
 }
 
 @mixin desktop-primary-title-style {
   font-family: $secondary-font-family;
+=======
+}
+
+@mixin desktop-primary-title-style {
+  font-family: $primary-font-family;
+>>>>>>> ee44f059457ec8e9451bb39934645a6d16e6ec2b
   font-style: normal;
   font-weight: 700;
   font-size: $desktop-primary-size-title;
   line-height: $desktop-primary-line-height-title;
   color: $primary-title-color;
+<<<<<<< HEAD
   text-transform: uppercase;
+=======
+>>>>>>> ee44f059457ec8e9451bb39934645a6d16e6ec2b
 }

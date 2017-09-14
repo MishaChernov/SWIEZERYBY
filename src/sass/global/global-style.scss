@@ -5,6 +5,7 @@ ul {
   list-style: none;
 }
 
+<<<<<<< HEAD
 h2 {
   position: relative;
   font-weight: 700;
@@ -22,6 +23,8 @@ h2 {
   }
 }
 
+=======
+>>>>>>> ee44f059457ec8e9451bb39934645a6d16e6ec2b
 body {
   @include mobile-primary-text-style;
 }
